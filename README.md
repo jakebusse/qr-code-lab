@@ -3,6 +3,9 @@
 - pip3 install image
 - pip3 install opencv-python
 
+==NOTES==
+URL's in QR Code creation must contain 'http://' or 'https://' otherwise the URL will not be properly detected.
+
 == RESOURCES USED ==
 https://www.pythontutorial.net/python-basics/python-check-if-file-exists/
 https://www.analyticsvidhya.com/blog/2021/07/3-interesting-python-projects-with-code-for-beginners/

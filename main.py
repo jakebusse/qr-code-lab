@@ -21,6 +21,11 @@ def runApp():
 
 def create(content):
     name = input("What do you want the file name to be (omit the extension)? ")
+    if '.' in name:
+        print("File name cannot contain '.'")
+        create(content)
+    else:
+        pass
     file_exists = exists(name + ".jpg")
     if file_exists == True:
         print("FILE ALREADY EXISTS")
@@ -53,7 +58,8 @@ def decode():
         print("FILE DOES NOT EXIST")
         createFile = input("Would you like to create a new QR code with this file name. (Answer Y/N) ")
         if createFile.upper() == "Y":
-            create()
+            content = input('What do you want the QR Code to represent? ')
+            create(content)
         else:
             decode()
 
